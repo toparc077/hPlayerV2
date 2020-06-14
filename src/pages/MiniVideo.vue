@@ -77,8 +77,8 @@ export default {
       }
       player.pause();
       this.$q.dialog({
-        title: '还原',
-        message: '此操作将在主窗口中打开视频并关闭当前窗口，是否继续',
+        title: 'reduction',
+        message: 'This operation will open the video in the main window and close the current window, whether to continue',
         cancel: true,
         persistent: true,
       }).onOk(() => {

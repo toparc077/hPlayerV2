@@ -100,7 +100,7 @@
             class="text-red"
             style="font-size: 4rem;"
           />
-          <div>加载分类失败</div>
+          <div>Failed to load classification</div>
         </div>
       </div>
     </q-drawer>
@@ -330,8 +330,8 @@ export default {
           if (extname === '.m3u8') {
             this.$q
               .dialog({
-                title: '播放',
-                message: '检测到搜索参数是hls流链接，是否播放',
+                title: 'Play',
+                message: 'Detected the search parameter is hls streaming link, whether to play',
                 cancel: true,
                 persistent: true,
               })
@@ -392,7 +392,7 @@ export default {
     processdVideoClass() {
       return [
         {
-          _: '全部',
+          _: 'All',
           $: {
             id: 'all',
           },

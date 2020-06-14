@@ -13,17 +13,17 @@
         <div style="flex: auto" class="flex justify-center items-center">
           <q-btn
             color="primary"
-            label="暂无视频源，点击选择文件导入"
+            label="Import Video"
             @click="openDialog"
           />
-          <span class="q-pa-sm">或前往</span>
+          <span class="q-pa-sm">Or go to</span>
           <q-btn
             color="primary"
             icon="settings"
-            label="设置"
+            label="Set up"
             @click="configClick"
           />
-          <span class="q-pa-sm">页面手动添加</span>
+          <span class="q-pa-sm">Add pages manually</span>
         </div>
       </q-page>
     </q-page-container>

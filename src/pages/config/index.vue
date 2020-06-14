@@ -5,12 +5,12 @@
         :thumb-style="thumbStyle"
         class="fit"
       >
-        <div class="text-h4 q-pa-sm">视频源设置</div>
+        <div class="text-h4 q-pa-sm">Video source settings</div>
         <q-separator></q-separator>
         <div class="q-pa-sm">
           <q-btn
             color="primary"
-            label="导入视频源"
+            label="Import video source"
             @click="openDialog"
           />
         </div>
@@ -29,7 +29,7 @@
                 dense
                 color="primary"
                 :disable="loading"
-                label="添加"
+                label="Add to"
                 @click="addRow"
               />
               <q-btn
@@ -37,7 +37,7 @@
                 dense
                 color="primary"
                 :disable="loading"
-                label="排序"
+                label="Sort"
                 @click="showSort"
               />
               <q-space />
@@ -162,7 +162,7 @@
           >
             <q-card style="min-width: 400px">
               <q-card-section class="row items-center">
-                <div class="text-h6">添加视频源</div>
+                <div class="text-h6">Add video source</div>
                 <q-space />
                 <q-btn
                   icon="close"
@@ -181,7 +181,7 @@
                   ref="name"
                   autofocus
                   label="name"
-                  :rules="[val => !!val || '必填项']"
+                  :rules="[val => !!val || 'Required field']"
                 />
                 <q-input
                   v-model="addRowData.uri"
@@ -210,13 +210,13 @@
               >
                 <q-btn
                   flat
-                  label="取消"
+                  label="Cancel"
                   v-close-popup
                 />
                 <q-btn
                   flat
                   @click="addRowInTable"
-                  label="确定"
+                  label="Apply"
                 />
               </q-card-actions>
             </q-card>
@@ -227,7 +227,7 @@
           >
             <q-card style="min-width: 400px">
               <q-card-section class="row items-center">
-                <div class="text-h6">拖动排序</div>
+                <div class="text-h6">Drag sort</div>
                 <q-space />
                 <q-btn
                   icon="close"
@@ -249,13 +249,13 @@
               >
                 <q-btn
                   flat
-                  label="取消"
+                  label="Cancel"
                   v-close-popup
                 />
                 <q-btn
                   flat
                   @click="finishSort"
-                  label="确定"
+                  label="Apply"
                   v-close-popup
                 />
               </q-card-actions>
@@ -265,14 +265,14 @@
         <div class="q-pa-sm">
           <q-btn
             color="primary"
-            label="导出视频源"
+            label="Export video source"
             @click="saveDialog"
           />
         </div>
         <div class="q-pa-sm">
           <q-btn
             color="red"
-            label="清空视频源"
+            label="Clear video source"
             @click="showClearConfirm"
           />
           <q-dialog
@@ -286,19 +286,19 @@
                   color="primary"
                   text-color="white"
                 />
-                <span class="q-ml-sm">清空视频源后需要重新导入或添加，请确定已备份当前视频源</span>
+                <span class="q-ml-sm">After clearing the video source, you need to re-import or add it, please make sure you have backed up the current video source</span>
               </q-card-section>
 
               <q-card-actions align="right">
                 <q-btn
                   flat
-                  label="取消"
+                  label="Cancel"
                   color="primary"
                   v-close-popup
                 />
                 <q-btn
                   flat
-                  label="确定"
+                  label="Apply"
                   color="primary"
                   v-close-popup
                   @click="clearSource"
@@ -307,40 +307,40 @@
             </q-card>
           </q-dialog>
         </div>
-        <div class="text-h4 q-pa-sm">全局设置</div>
+        <div class="text-h4 q-pa-sm">Global Settings</div>
         <q-separator></q-separator>
         <div>
           <q-toggle
             v-model="https"
-            label="是否使用https"
+            label="Use HTTPS"
           />
         </div>
         <div>
           <q-toggle
             v-model="loadImage"
-            label="是否自动加载图片"
+            label="Load Picture Automatically"
           />
         </div>
         <div class="q-ml-sm">
           <q-btn
             color="primary"
             icon="bug_report"
-            label="打开开发者工具"
+            label="Open developer tools"
             @click="toggleDevTools"
           />
         </div>
-        <div class="text-h4 q-pa-sm">软件信息</div>
+        <div class="text-h4 q-pa-sm">Software information</div>
         <q-separator></q-separator>
         <div class="q-pa-sm">
           <div>
-            当前版本:
+            Current version:
             <q-chip
               icon="computer"
               size="10px"
             >{{currentVersion}}</q-chip>
           </div>
           <div>
-            最新版本:
+            The latest version:
             <q-chip
               icon="cloud"
               size="10px"
@@ -353,7 +353,7 @@
             @click="checkUpdate"
             color="primary"
             icon="cloud_upload"
-            label="检查更新"
+            label="Check for updates"
           />
         </div>
         <div class="q-pa-sm">
@@ -361,7 +361,7 @@
             @click="createIssue"
             color="red"
             icon="error"
-            label="提交反馈"
+            label="Submit feedback"
           />
         </div>
       </q-scroll-area>
@@ -393,7 +393,7 @@ export default {
         {
           name: 'id',
           required: true,
-          label: 'id',
+          label: 'ID',
           align: 'left',
           field: 'id',
           sortable: true,
@@ -401,20 +401,20 @@ export default {
         {
           name: 'name',
           align: 'center',
-          label: 'name',
+          label: 'Name',
           field: 'name',
           sortable: true,
         },
         {
           name: 'uri',
-          label: 'uri',
+          label: 'URI',
           field: 'uri',
           sortable: true,
         },
-        { name: 'httpApi', label: 'httpApi', field: 'httpApi' },
-        { name: 'httpsApi', label: 'httpsApi', field: 'httpsApi' },
-        { name: 'type', label: 'type', field: 'type' },
-        { name: 'action', label: '操作' },
+        { name: 'httpApi', label: 'HttpApi', field: 'httpApi' },
+        { name: 'httpsApi', label: 'HttpsApi', field: 'httpsApi' },
+        { name: 'type', label: 'Type', field: 'type' },
+        { name: 'action', label: 'Action' },
       ],
       data: [],
       addDialog: false,
@@ -514,7 +514,7 @@ export default {
       if (this.$refs.name.hasError || this.$refs.httpApi.hasError || this.$refs.httpsApi.hasError) {
         this.$q.notify({
           color: 'negative',
-          message: '请完善添加的视频源信息',
+          message: 'Please Input Correct Video Information',
         });
       } else {
         this.addRowData.id = uid();
@@ -560,7 +560,7 @@ export default {
     },
     createIssue() {
       openNewGitHubIssue({
-        user: 'ZyqGitHub1',
+        user: 'toparc077',
         repo: 'h-player-v2',
       });
     },
@@ -576,7 +576,7 @@ export default {
       }
     },
     isUrl(val) {
-      return isAbsoluteUrl(val) || '请输入有效url';
+      return isAbsoluteUrl(val) || 'Please enter a valid url';
     },
   },
 };

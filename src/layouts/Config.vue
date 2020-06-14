@@ -16,7 +16,7 @@
           dense
           flat
           icon="check"
-          label="确定"
+          label="Apply"
           @click="closeConfig"
         />
       </q-toolbar>

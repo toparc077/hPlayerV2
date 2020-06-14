@@ -13,7 +13,7 @@
             name="cloud_off"
             style="font-size: 4rem;"
           />
-          <div>暂无数据</div>
+          <div>No data</div>
         </div>
       </div>
       <div
@@ -26,7 +26,7 @@
             class="text-red"
             style="font-size: 4rem;"
           />
-          <div>加载数据失败</div>
+          <div>Failed to load data</div>
         </div>
       </div>
       <q-scroll-area

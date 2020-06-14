@@ -24,29 +24,29 @@
         >
           <q-card>
             <q-card-section>
-              <div class="text-h6">演员: {{currentVideo.actor[0]}}</div>
-              <div class="text-h6">地区: {{currentVideo.area[0]}}</div>
-              <div class="text-h6">简介: {{currentVideo.des[0]}}</div>
-              <div class="text-h6">导演: {{currentVideo.director[0]}}</div>
-              <div class="text-h6">语言: {{currentVideo.lang[0]}}</div>
-              <div class="text-h6">时间: {{currentVideo.last[0]}}</div>
-              <div class="text-h6">备注: {{currentVideo.note[0]}}</div>
+              <div class="text-h6">Actor: {{currentVideo.actor[0]}}</div>
+              <div class="text-h6">Area: {{currentVideo.area[0]}}</div>
+              <div class="text-h6">Introduction: {{currentVideo.des[0]}}</div>
+              <div class="text-h6">Director: {{currentVideo.director[0]}}</div>
+              <div class="text-h6">Language: {{currentVideo.lang[0]}}</div>
+              <div class="text-h6">Time: {{currentVideo.last[0]}}</div>
+              <div class="text-h6">Remarks: {{currentVideo.note[0]}}</div>
               <div class="text-h6">
-                图片:
+                Image:
                 <q-img
                   :src="currentVideo.pic[0]"
                   spinner-color="white"
                   style="height: 140px; max-width: 150px"
                 />
               </div>
-              <div class="text-h6">评分: {{currentVideo.state[0]}}</div>
-              <div class="text-h6">类型: {{currentVideo.type[0]}}</div>
-              <div class="text-h6">年份: {{currentVideo.year[0]}}</div>
+              <div class="text-h6">Score: {{currentVideo.state[0]}}</div>
+              <div class="text-h6">Types of: {{currentVideo.type[0]}}</div>
+              <div class="text-h6">Years: {{currentVideo.year[0]}}</div>
             </q-card-section>
           </q-card>
         </q-expansion-item>
         <q-table
-          title="分集信息"
+          title="Diversity information"
           :data="episodeInfo"
           :columns="columns"
           row-key="name"
@@ -60,7 +60,7 @@
               v-if="currentEpisode.url === props.row.url"
               icon="play_arrow"
               size="10px"
-            >正在播放</q-chip>
+            >Now Playing</q-chip>
             <q-btn
               v-else
               round
@@ -130,32 +130,32 @@ export default {
       columns: [
         {
           name: 'episode',
-          label: '分集',
+          label: 'Episode',
           field: 'episode',
           sortable: true,
         },
         {
           name: 'url',
-          label: '链接',
+          label: 'Url',
           field: 'url',
           sortable: true,
         },
         {
           name: 'player',
-          label: '播放器类型',
+          label: 'Player',
           field: 'player',
           sortable: true,
         },
         {
           name: 'actions',
-          label: '操作',
+          label: 'Actions',
         },
       ],
       episodeInfo: [],
       currentEpisode: {
-        episode: '无',
+        episode: 'No',
         url: '',
-        player: '无',
+        player: 'No',
       },
     };
   },
@@ -194,7 +194,7 @@ export default {
       return {
         episode: splitStr[0],
         url,
-        player: '无',
+        player: 'No',
       };
     },
 
@@ -242,8 +242,8 @@ export default {
     errorHandler(event, data) {
       if (data.details && data.details === 'manifestLoadError') {
         this.$q.dialog({
-          title: '错误',
-          message: '无法加载资源',
+          title: 'Error',
+          message: 'Unable to load resource',
           persistent: true,
         });
       }

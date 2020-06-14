@@ -12,7 +12,7 @@
       v-if="canUpdate"
       color="orange"
       icon="cloud_upload"
-      label="发现新版本，点击查看"
+      label="Found new version, click to view"
       @click="visitRelease"
     />
   </q-toolbar>
