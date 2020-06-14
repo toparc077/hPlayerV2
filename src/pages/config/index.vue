@@ -5,7 +5,7 @@
         :thumb-style="thumbStyle"
         class="fit"
       >
-        <div class="text-h4 q-pa-sm">Video source settings</div>
+        <div class="text-h4 q-pa-sm">Video Source Settings</div>
         <q-separator></q-separator>
         <div class="q-pa-sm">
           <q-btn
@@ -329,18 +329,18 @@
             @click="toggleDevTools"
           />
         </div>
-        <div class="text-h4 q-pa-sm">Software information</div>
+        <div class="text-h4 q-pa-sm">Software Information</div>
         <q-separator></q-separator>
         <div class="q-pa-sm">
           <div>
-            Current version:
+            Current Version:
             <q-chip
               icon="computer"
               size="10px"
             >{{currentVersion}}</q-chip>
           </div>
           <div>
-            The latest version:
+            The Latest Version:
             <q-chip
               icon="cloud"
               size="10px"
