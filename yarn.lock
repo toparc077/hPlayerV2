@@ -2623,6 +2623,11 @@ core-js@^2.4.0, core-js@^2.6.5:
   resolved "https://registry.npm.taobao.org/core-js/download/core-js-2.6.9.tgz#6b4b214620c834152e179323727fc19741b084f2"
   integrity sha1-a0shRiDINBUuF5Mjcn/Bl0GwhPI=
 
+core-js@^2.6.11:
+  version "2.6.11"
+  resolved "https://registry.yarnpkg.com/core-js/-/core-js-2.6.11.tgz#38831469f9922bded8ee21c9dc46985e0399308c"
+  integrity sha512-5wjnpaT/3dV+XB4borEsnAYQchn00XSgTAWKDkEqv+K8KevjbzmofK6hfJ9TZIlpj2N0xQpazy7PiRQiWHqzWg==
+
 core-js@^3.1.4:
   version "3.2.1"
   resolved "https://registry.npm.taobao.org/core-js/download/core-js-3.2.1.tgz#cd41f38534da6cc59f7db050fe67307de9868b09"
@@ -4679,9 +4684,9 @@ hex-color-regex@^1.1.0:
   integrity sha1-TAb8y0YC/iYCs8k9+C1+fb8aio4=
 
 highlight.js@^9.3.0:
-  version "9.15.10"
-  resolved "https://registry.npm.taobao.org/highlight.js/download/highlight.js-9.15.10.tgz#7b18ed75c90348c045eef9ed08ca1319a2219ad2"
-  integrity sha1-exjtdckDSMBF7vntCMoTGaIhmtI=
+  version "9.18.5"
+  resolved "https://registry.yarnpkg.com/highlight.js/-/highlight.js-9.18.5.tgz#d18a359867f378c138d6819edfc2a8acd5f29825"
+  integrity sha512-a5bFyofd/BHCX52/8i8uJkjr9DYwXIPnM/plwI6W7ezItLGqzt7X2G2nXuYSfsIJdkwwj/g9DG1LkcGJI/dDoA==
 
 hls.js@^0.12.4:
   version "0.12.4"
